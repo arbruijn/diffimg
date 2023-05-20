@@ -39,6 +39,13 @@ const int EXIT_NOK = 1;
 #include <time.h>
 #endif
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
+namespace Qt
+{
+    static auto endl = ::endl;
+}
+#endif
+
 // functions for console mode (in order to get the message)
 //-----------------------------------------------------------
 

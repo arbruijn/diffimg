@@ -488,7 +488,9 @@ static int qimageChannelCount(const QImage &img)
     case QImage::Format_MonoLSB:
     case QImage::Format_Alpha8:
     case QImage::Format_Grayscale8:
+    #if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
     case QImage::Format_Grayscale16:
+    #endif
         return 1;
 
     default:

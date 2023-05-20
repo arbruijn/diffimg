@@ -83,8 +83,9 @@ INCLUDEPATH += \
     $$PWD/src/metrics \
     $$PWD/src/formats
 
-INCLUDEPATH += /usr/include/qwt
-LIBS += -lqwt
+#INCLUDEPATH += /usr/include/qwt
+#LIBS += -lqwt
+CONFIG += qwt
 
 RESOURCES += $$PWD/res/$${TARGET}.qrc
 
