@@ -64,7 +64,7 @@ void WipeItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
     Q_UNUSED(option);
     Q_UNUSED(widget);
 
-    painter->setRenderHint(QPainter::SmoothPixmapTransform);
+    //painter->setRenderHint(QPainter::SmoothPixmapTransform);
 
     switch (m_wipeMethod) {
     case WipeMethod::WIPE_VERTICAL: {

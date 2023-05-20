@@ -530,7 +530,8 @@ void DiffImgWindow::computeDifferenceNew()
     BaseMetric *met = MetricsManager::getMetrics()[m_metricType];
 
     // TODO put htis at the right place !!!
-    labelCurrentMetric->setText(tr("Current metric: %1").arg(met->getName()));
+    //labelCurrentMetric->setText(tr("Current metric: %1").arg(met->getName()));
+    labelCurrentMetric->setText(met->getName());
 
     met->checkDifferences(m_file1, m_file2);
 
@@ -1387,6 +1388,7 @@ void DiffImgWindow::dragEnterEvent(QDragEnterEvent *event)
 }
 void DiffImgWindow::resizeEvent(QResizeEvent *event)
 {
+    return;
     if (m_image1Thumbnail.isNull() || m_image2Thumbnail.isNull() || m_diffImageThumbnail.isNull()) {
         QMainWindow::resizeEvent(event);
         return;
