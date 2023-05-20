@@ -541,7 +541,7 @@ void DiffImgWindow::computeDifferenceNew()
 
     updateImage1(met->getImage1());
     updateImage2(met->getImage2());
-    updateDifference(met->getImageDifference());
+    updateDifference(met->getImageMask());
     m_maskDiffImage = met->getImageMask();
     graphicsView1->setMask(m_maskDiffImage);
     graphicsView2->setMask(m_maskDiffImage);
