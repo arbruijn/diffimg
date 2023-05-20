@@ -943,9 +943,9 @@ QImage BaseMetric::createDiffMask(const QImage &img)
             }
 
             if (val > m_meanError) {
-                *dest = qRgba(0, 255, 255, 255);
+                *dest = qRgba(255, 255, 0, 255);
             } else {
-                *dest = qRgba(0, 0, 255, 255);
+                *dest = qRgba(255, 0, 0, 255);
             }
         }
     }
