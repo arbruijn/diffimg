@@ -65,8 +65,6 @@ void PerChannelMetric::performDifference()
     }
 
     if (img1.format() == QImage::Format_ARGB32_Premultiplied && img2.format() == QImage::Format_ARGB32_Premultiplied) {
-        qDebug() << "premult";
-
         for (int y = 0; y < output.height(); y++) {
             uchar *dst = output.scanLine(y);
             const QRgb *src1 = (QRgb *)img1.constScanLine(y);
@@ -88,8 +86,6 @@ void PerChannelMetric::performDifference()
         // TODO blah
         Q_ASSERT(img1.format() == QImage::Format_ARGB32_Premultiplied && img2.format() == QImage::Format_ARGB32_Premultiplied);
     } else {
-        qDebug() << "not pre";
-
         for (int y = 0; y < output.height(); y++) {
             QRgb *dst = (QRgb *)output.scanLine(y);
             const QRgb *src1 = (QRgb *)img1.constScanLine(y);
